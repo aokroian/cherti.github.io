@@ -1,0 +1,19 @@
+.privacy {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.privacy h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+
+.privacy p {
+    color: rgba(255,255,255,0.75);
+
+    margin-bottom: 1.5rem;
+
+    font-size: 1.1rem;
+}
