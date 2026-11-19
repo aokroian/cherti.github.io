@@ -1,0 +1,78 @@
+.team {
+    width: 100%;
+    max-width: 76rem;
+    margin-inline: auto;
+}
+
+.team__intro h1 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(2.25rem, 6vw, 5rem);
+    line-height: 1.1;
+}
+
+.team__intro p {
+    max-width: 46ch;
+    margin: 0;
+    color: #d5cde0;
+    font-size: clamp(1.0625rem, 2vw, 1.25rem);
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: clamp(1.5rem, 4vw, 3rem) 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.team-members li {
+    display: flex;
+    align-items: flex-end;
+    min-height: clamp(8rem, 17vw, 13rem);
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+    border: 1px solid #342947;
+    border-top: 3px solid #7c5cff;
+    border-radius: 1rem;
+    background: radial-gradient(ellipse at top right, #322354, #15111d 72%);
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.team__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.team__links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0.5rem 0.875rem;
+    border: 1px solid #987eff;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.team__links a[href="/contact"] {
+    background: #322354;
+}
+
+.team__links a:hover,
+.team__links a:focus-visible {
+    background: #483276;
+}
+
+.team__links a:focus-visible {
+    outline: 2px solid #c6b7ff;
+    outline-offset: 3px;
+}
+
+@media (max-width: 42rem) {
+    .team-members {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
