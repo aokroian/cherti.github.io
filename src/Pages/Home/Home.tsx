@@ -1,7 +1,7 @@
 export default function Home() {
     return (
         <section className="page-section">
-            <h1>CHERTI</h1>
+            <h1 className="wordmark">CHERTI</h1>
 
             <p>
                 Independent game development studio creating
