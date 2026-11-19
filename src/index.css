@@ -21,7 +21,33 @@ a {
   text-decoration: none;
 }
 
-section {
+#root {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  padding: 120px 3rem 3rem;
+  min-height: 100svh;
+}
+
+main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+main > section {
+  flex: 1;
+  padding: 40px 3rem 3rem;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 42rem) {
+  main > section {
+    padding: 1.5rem clamp(1rem, 5vw, 2rem);
+  }
+}
+
+@media (max-height: 31.25rem) {
+  main > section {
+    padding-block: 1rem;
+  }
 }

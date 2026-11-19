@@ -1,14 +1,14 @@
 .navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
 
-    width: 100%;
-    height: 80px;
+    min-height: 80px;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    column-gap: 1rem;
 
     padding: 0 4rem;
 
@@ -31,6 +31,7 @@
 
 .navbar__links {
     display: flex;
+    flex-wrap: wrap;
     gap: 2.5rem;
 
     list-style: none;
@@ -49,7 +50,8 @@
 }
 
 
-.navbar__links a:hover {
+.navbar__links a:hover,
+.navbar__links a:focus-visible {
     color: white;
 }
 
@@ -74,6 +76,33 @@
 }
 
 
-.navbar__links a:hover::after {
+.navbar__links a:hover::after,
+.navbar__links a:focus-visible::after {
     transform: scaleX(1);
+}
+
+@media (max-width: 42rem) {
+    .navbar {
+        position: static;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.25rem 1rem;
+    }
+
+    .navbar__links {
+        justify-content: center;
+        gap: 0.25rem;
+    }
+
+    .navbar a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding-inline: 0.5rem;
+    }
+
+    .navbar__links a::after {
+        bottom: 0;
+    }
 }
