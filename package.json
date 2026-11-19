@@ -3,16 +3,19 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && cp dist/index.html dist/404.html",
+    "build": "tsc -b && vite build && node scripts/build-pages.mjs",
     "lint": "oxlint",
     "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "react-router-dom": "^7.18.1"
+    "react-router-dom": "^7.18.2"
   },
   "devDependencies": {
     "@types/node": "^24.13.2",
@@ -21,6 +24,6 @@
     "@vitejs/plugin-react": "^6.0.3",
     "oxlint": "^1.71.0",
     "typescript": "~6.0.2",
-    "vite": "^8.1.1"
+    "vite": "^8.1.6"
   }
 }

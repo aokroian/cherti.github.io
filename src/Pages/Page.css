@@ -26,11 +26,19 @@
 
 .page-section a {
     color: rgba(255, 255, 255, 0.85);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
     transition: color 0.2s ease;
 }
 
 .page-section a:hover {
     color: #7c5cff;
+}
+
+.privacy {
+    width: 100%;
+    max-width: 50rem;
+    margin-inline: auto;
 }
 
 @media (max-width: 42rem) {

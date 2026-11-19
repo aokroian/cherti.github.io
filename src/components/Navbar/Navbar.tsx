@@ -1,45 +1,26 @@
 import { Link } from "react-router-dom";
+import { siteRoutes } from "../../routes";
 import "./Navbar.css";
 
-export default function Navbar() {
-    return (
-        <nav className="navbar">
+const [home, ...navigation] = siteRoutes;
 
+export default function Navbar({ activePath }: { activePath?: string }) {
+    return (
+        <nav className="navbar" aria-label="Main navigation">
             <div className="navbar__logo">
-                <Link to="/">
-                    CHERTI
+                <Link to={home.path} aria-current={activePath === home.path ? "page" : undefined}>
+                    {home.label}
                 </Link>
             </div>
-
-
             <ul className="navbar__links">
-
-                <li>
-                    <Link to="/team">
-                        Team
-                    </Link>
-                </li>
-
-                <li>
-                    <Link to="/games">
-                        Games
-                    </Link>
-                </li>
-
-                <li>
-                    <Link to="/contact">
-                        Contact
-                    </Link>
-                </li>
-
-                <li>
-                    <Link to="/privacy">
-                        Privacy
-                    </Link>
-                </li>
-
+                {navigation.map(({ path, label }) => (
+                    <li key={path}>
+                        <Link to={path} aria-current={activePath === path ? "page" : undefined}>
+                            {label}
+                        </Link>
+                    </li>
+                ))}
             </ul>
-
         </nav>
     );
 }

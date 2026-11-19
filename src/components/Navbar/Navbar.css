@@ -51,7 +51,8 @@
 
 
 .navbar__links a:hover,
-.navbar__links a:focus-visible {
+.navbar__links a:focus-visible,
+.navbar__links a[aria-current="page"] {
     color: white;
 }
 
@@ -77,7 +78,8 @@
 
 
 .navbar__links a:hover::after,
-.navbar__links a:focus-visible::after {
+.navbar__links a:focus-visible::after,
+.navbar__links a[aria-current="page"]::after {
     transform: scaleX(1);
 }
 
