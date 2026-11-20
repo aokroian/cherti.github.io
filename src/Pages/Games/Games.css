@@ -1,6 +1,18 @@
-.games__list {
+.games__gallery {
     display: grid;
-    border-bottom: 1px solid var(--rule);
+    gap: 1rem;
+}
+
+.games__section + .games__section {
+    margin-top: clamp(2rem, 6vw, 4rem);
+}
+
+.games__section > h2 {
+    margin: 0 0 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--steel);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    line-height: 1.2;
 }
 
 .game-card {
@@ -30,7 +42,7 @@
     min-width: 0;
 }
 
-.game-card__details h2 {
+.game-card__title {
     margin: 0;
     font-size: clamp(1.375rem, 2.5vw, 2rem);
     line-height: 1.15;
@@ -41,12 +53,88 @@
     color: var(--muted);
 }
 
-.game-card__platforms {
+.game-card__metadata,
+.jam-archive__event {
     font-size: 0.875rem;
+}
+
+.games__gallery .game-card {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 0.875rem;
+    border: 1px solid var(--rule);
+    background: var(--panel);
+}
+
+.games__gallery .game-card__screenshot {
+    aspect-ratio: 8 / 5;
+    max-height: none;
+}
+
+.games__gallery .game-card__details {
+    grid-template-rows: auto 1fr auto auto;
+    align-items: start;
+}
+
+.games__gallery .game-card__title {
+    font-size: 1.375rem;
+}
+
+.jam-archive {
+    margin: 1rem 0 0;
+    padding: 0;
+    border-bottom: 1px solid var(--rule);
+    list-style: none;
+}
+
+.jam-archive a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.25rem 1rem;
+    min-height: 44px;
+    padding: 0.625rem;
+    border-top: 1px solid var(--rule);
+}
+
+.jam-archive a:hover {
+    background: var(--panel);
+}
+
+.jam-archive__event {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.jam-archive__load {
+    margin-top: 1rem;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.jam-archive__load:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
 }
 
 @media (max-width: 42rem) {
     .game-card {
         grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (min-width: 42.0625rem) {
+    .games__gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 62rem) {
+    .games__gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
