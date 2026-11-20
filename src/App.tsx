@@ -20,7 +20,7 @@ const pages: Record<(typeof siteRoutes)[number]["path"], ComponentType> = {
 function NotFound() {
     return (
         <section className="page-section">
-            <h1>Page Not Found</h1>
+            <h1 className="page-heading">Page Not Found</h1>
             <p>The page you requested could not be found.</p>
             <Link to="/">Back to home</Link>
         </section>

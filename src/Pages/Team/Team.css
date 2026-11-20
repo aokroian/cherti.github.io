@@ -1,74 +1,26 @@
-.team {
-    width: 100%;
-    max-width: 76rem;
-    margin-inline: auto;
-}
-
-.team__intro h1 {
-    margin: 0 0 0.75rem;
-    font-size: clamp(2.25rem, 6vw, 5rem);
-    line-height: 1.1;
-}
-
 .team__intro p {
-    max-width: 46ch;
+    max-width: 58ch;
     margin: 0;
-    color: #d5cde0;
-    font-size: clamp(1.0625rem, 2vw, 1.25rem);
+    color: var(--muted);
 }
 
 .team-members {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-    margin: clamp(1.5rem, 4vw, 3rem) 0 0;
+    gap: 0.875rem;
+    margin: 1.75rem 0 1.25rem;
     padding: 0;
     list-style: none;
 }
 
 .team-members li {
-    display: flex;
-    align-items: flex-end;
-    min-height: clamp(8rem, 17vw, 13rem);
-    padding: clamp(1.25rem, 4vw, 2.5rem);
-    border: 1px solid #342947;
-    border-top: 3px solid #7c5cff;
-    border-radius: 1rem;
-    background: radial-gradient(ellipse at top right, #322354, #15111d 72%);
-    font-size: clamp(1.75rem, 4vw, 3rem);
+    padding: clamp(1rem, 4vw, 2.25rem);
+    border: 1px solid var(--rule);
+    border-top-color: var(--steel);
+    background: linear-gradient(#242424, var(--panel));
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
     font-weight: 700;
-    line-height: 1.1;
-}
-
-.team__links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1.25rem;
-}
-
-.team__links a {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    padding: 0.5rem 0.875rem;
-    border: 1px solid #987eff;
-    border-radius: 0.5rem;
-    font-weight: 600;
-}
-
-.team__links a[href="/contact"] {
-    background: #322354;
-}
-
-.team__links a:hover,
-.team__links a:focus-visible {
-    background: #483276;
-}
-
-.team__links a:focus-visible {
-    outline: 2px solid #c6b7ff;
-    outline-offset: 3px;
+    line-height: 1.2;
 }
 
 @media (max-width: 42rem) {

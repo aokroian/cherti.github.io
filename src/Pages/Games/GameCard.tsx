@@ -1,3 +1,5 @@
+import "./Games.css";
+
 export type Game = {
     id: string;
     title: string;
@@ -23,7 +25,7 @@ export default function GameCard({ game }: { game: Game }) {
                 <p>{game.description}</p>
                 <p className="game-card__platforms">{game.platforms.join(" · ")}</p>
                 <a
-                    className="game-card__store-link"
+                    className="action-link"
                     href={game.appStoreUrl}
                     aria-label={`View on the App Store: ${game.title}`}
                 >

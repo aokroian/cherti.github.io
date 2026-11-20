@@ -1,7 +1,7 @@
 export default function Privacy() {
     return (
         <section className="privacy">
-            <h1>Privacy Policy</h1>
+            <h1 className="page-heading">Privacy Policy</h1>
 
             <p>
                 CHERTI respects your privacy.

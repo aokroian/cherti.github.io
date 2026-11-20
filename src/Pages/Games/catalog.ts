@@ -1,19 +1,21 @@
 import type { Game } from "./GameCard";
 
-export const games: readonly Game[] = [
-    {
-        id: "mimic-nights",
-        title: "Mimic Nights",
-        description: "Survive seven nights in a dark cabin. When the light goes out, a mimic disguised as an everyday object moves. Spot what changed before you run out of matches and bullets.",
-        platforms: ["iPhone", "iPad"],
-        screenshot: {
-            src: "/games/mimic-nights.webp",
-            alt: "First-person view of an open book on the cabin floor, lit by a match.",
-            width: 1200,
-            height: 554,
-        },
-        appStoreUrl: "https://apps.apple.com/us/app/mimic-nights/id6738483986",
+export const featuredGame: Game = {
+    id: "mimic-nights",
+    title: "Mimic Nights",
+    description: "Survive seven nights in a dark cabin. When the light goes out, a mimic disguised as an everyday object moves. Spot what changed before you run out of matches and bullets.",
+    platforms: ["iPhone", "iPad"],
+    screenshot: {
+        src: "/games/mimic-nights.webp",
+        alt: "First-person view of an open book on the cabin floor, lit by a match.",
+        width: 1200,
+        height: 554,
     },
+    appStoreUrl: "https://apps.apple.com/us/app/mimic-nights/id6738483986",
+};
+
+export const games: readonly Game[] = [
+    featuredGame,
     {
         id: "run-use-gun",
         title: "Run Use Gun",

@@ -1,7 +1,7 @@
 export default function Contact() {
     return (
         <section className="page-section">
-            <h1>Contact</h1>
+            <h1 className="page-heading">Contact</h1>
 
             <div>
                 <p>
